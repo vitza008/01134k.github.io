@@ -116,7 +116,7 @@ export default function Home() {
 
       {/* Main Container */}
       <main className="flex-1 w-full max-w-5xl mx-auto px-4 py-12 relative z-10">
-        
+
         {/* Header */}
         <header className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 border-b border-slate-800/80 pb-6">
           <div>
@@ -145,7 +145,7 @@ export default function Home() {
 
             <div className="w-px h-4 bg-slate-800" />
 
-            <span className="text-slate-400">Database:</span>
+            <span className="text-slate-400">Database is ok ?:</span>
             {apiStatus.online ? (
               apiStatus.supabase ? (
                 <span className="text-emerald-400 font-medium bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/60">
@@ -166,7 +166,7 @@ export default function Home() {
         <section className="mb-12">
           <div className="bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-3xl p-6 md:p-8 shadow-2xl">
             <h2 className="text-xl font-bold mb-4">ย่อลิงก์ใหม่ของคุณ</h2>
-            
+
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
               <input
                 type="text"
@@ -290,11 +290,10 @@ export default function Home() {
                       {/* Copy Action */}
                       <button
                         onClick={() => handleCopy(item.short_code)}
-                        className={`px-3 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer ${
-                          copiedId === item.short_code
+                        className={`px-3 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer ${copiedId === item.short_code
                             ? "bg-emerald-950/30 text-emerald-400 border-emerald-900/50"
                             : "bg-slate-950 hover:bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700"
-                        }`}
+                          }`}
                       >
                         {copiedId === item.short_code ? "✓ คัดลอกแล้ว" : "📋 คัดลอก"}
                       </button>
